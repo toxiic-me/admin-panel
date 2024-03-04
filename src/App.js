@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import Login from './pages/login/Login.js'
+import Home from './pages/home/Home.jsx'
+import CreateEmployee from './pages/create-employee/CreateEmployee.jsx'
+import EmployeeList from './pages/employee_list/EmployeeList.jsx'
+import Navbar from './components/navbar/Navbar.jsx'
+import UpdateEmployee from './pages/update-employee/UpdateEmployee.jsx'
 
-function App() {
+const App = () => {
+  const [page, setPage] = useState('Login');
+  const [updateData, setUpdateData] = useState({})
+
+  const openPage = (page) => {
+    setPage(page)
+  }
+
+  const setUpdateFn = ({ name, email, phone, image, gender, designation, course, id, }) => {
+    setUpdateData({ name, email, phone, image, gender, designation, course, id, })
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      {page === 'Login' ? <Login setPage={openPage} /> : <Navbar setPage={openPage} />}
+      {page === 'Home' ? <Home setPage={openPage} /> : null}
+      {page === 'EmployeeList' ? <EmployeeList setPage={openPage} setUpdateData={setUpdateFn} /> : null}
+      {page === 'CreateEmployee' ? <CreateEmployee setPage={openPage} /> : null}
+      {page === 'UpdateEmployee' ? <UpdateEmployee setPage={openPage} updateData={updateData} /> : null}
+    </>
+  )
 }
 
-export default App;
+export default App

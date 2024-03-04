@@ -1,0 +1,88 @@
+.listHeading{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.listHeading h2{
+    font-size: 0.89rem;
+}
+.listHeading .actions{
+    width: 180px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.listHeading .actions button{
+    width: 30%;
+    padding: 3px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.listHeading .uniqueId, .name, .image, .email, .mobile, .designation, .gender, .course, .createDate{
+    width: 100px;
+    text-align: center;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listHeading .email{
+    width: 200px;
+}
+
+.listHeading .actions .delete{
+    background: red;
+}
+
+.listHeading .actions .update{
+    background: skyblue;
+}
+.listHeading .image{
+    width: 50px;
+}
+
+.listHeading .image img{
+    width: 50px;
+    height: 50px;
+}
+
+.employeeListheading{
+    margin-top: 5px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 3rem;
+}
+
+.employeeListheading h2{
+    font-size: 1.3rem;
+    text-decoration: underline;
+}
+
+.employeeListheading button{
+    padding: 5px 10px;
+    background: rgb(167, 234, 68);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+
+}
+.employeeListheading button:hover{
+    text-decoration: underline;
+}
+
+.listHeading .uniqueId{
+    width: 30px;
+}
+
+.listHeading .gender{
+    width: 50px;
+}

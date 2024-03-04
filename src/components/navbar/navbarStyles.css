@@ -1,0 +1,41 @@
+nav{
+    width: 100vw;
+    height: fit-content;
+    padding: 10px 10px 0px 10px;
+
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-evenly;
+
+}
+
+nav ul li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+nav ul li:hover{
+    text-decoration: underline;
+}
+
+nav ul li button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+nav ul li button:hover{
+    text-decoration: underline;
+    color: rgba(0, 0, 0, 0.575);
+}
+nav ul li .logout{
+    color: red;
+    border: none;
+    cursor: pointer;
+}
+nav ul li .logout:hover{
+    color: rgba(255, 0, 0, 0.724);
+}
